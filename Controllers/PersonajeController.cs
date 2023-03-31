@@ -95,4 +95,21 @@ public class PersonajeController : ControllerBase
 
         return Ok(personaje);
     }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<PersonajeModel>> Delete(
+        [FromRoute] int id)
+    {
+        PersonajeModel personajeModel = dbContext.Personaje
+            .Where((p) => p.Id == id)
+            .FirstOrDefault();
+
+        if(personajeModel == null)
+                return NotFound();
+
+        dbContext.Personaje.Remove(personajeModel);
+        await dbContext.SaveChangesAsync();
+
+        return Ok(personajeModel);
+    }
 }
