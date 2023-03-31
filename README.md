@@ -15,21 +15,21 @@ Run the project.
 The API has endpoints for retrieving all characters, retrieving a character by id, retrieving a character by alter ego, creating a new character, updating a character, and deleting a character.
 
 ## Endpoints
-GET /api/personaje
++ GET /api/personaje
 Retrieves all characters.
 
-GET /api/personaje/{id}
++ GET /api/personaje/{id}
 Retrieves a character by id.
 
-GET /api/personaje/{alte}
++ GET /api/personaje/{alte}
 Retrieves a character by alter ego.
 
-POST /api/personaje
++ POST /api/personaje
 Creates a new character.
 
-PUT /api/personaje/{id}
++ PUT /api/personaje/{id}
 Updates a character by id.
 
-DELETE /api/personaje/{id}
++ DELETE /api/personaje/{id}
 Deletes a character by id.
 
